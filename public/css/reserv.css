@@ -1,0 +1,17 @@
+.correct{
+  display: none;
+}
+.wrong{
+  display: none;
+}
+
+.correct1{
+  display: none;
+}
+.wrong1{
+  display: none;
+}
+
+.bolck{
+display: block!important;
+}

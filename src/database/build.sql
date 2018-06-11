@@ -1,7 +1,7 @@
 BEGIN;
 DROP TABLE IF EXISTS  members,admin,category,waiting_list,lending,books CASCADE;
 CREATE TABLE members (
-  	id serial NOT NULL UNIQUE,
+  	id serial NOT NULL ,
 	full_name varchar(150) NOT NULL,
 	mobile varchar(150) NOT NULL UNIQUE,
 	email varchar(250) NOT NULL UNIQUE,
@@ -9,6 +9,7 @@ CREATE TABLE members (
 ) WITH (
   OIDS=FALSE
 );
+
 
 
 
@@ -57,6 +58,7 @@ CREATE TABLE lending (
   OIDS=FALSE
 );
 
+   
 
 
 CREATE TABLE books (
@@ -65,12 +67,14 @@ CREATE TABLE books (
 	publish_year varchar(100) NOT NULL,
 	category_id integer NOT NULL,
 	book_name varchar(100) NOT NULL UNIQUE,
-	image varchar(400) NOT NULL UNIQUE,
+	image varchar(400)  UNIQUE,
 	description varchar(500) NOT NULL,
+  num_copy integer NOT NULL,
 	CONSTRAINT books_pk PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
 );
+
 
 
 
@@ -86,4 +90,15 @@ ALTER TABLE "lending" ADD CONSTRAINT "lending_fk0" FOREIGN KEY ("book_id") REFER
 ALTER TABLE "lending" ADD CONSTRAINT "lending_fk1" FOREIGN KEY ("member_id") REFERENCES "members"("id");
 
 ALTER TABLE "books" ADD CONSTRAINT "books_fk0" FOREIGN KEY ("category_id") REFERENCES "category"("id");
+
+
+
+
+INSERT INTO category (name)VALUES('it');
+
+    INSERT INTO books (author,publish_year,category_id,book_name,	description,num_copy)VALUES('mee','2015','1','pro','this worst','0');
+
+    INSERT INTO members (full_name,mobile,email)VALUES('eman','0592043608','eman@live.com');
+
+
 COMMIT;

@@ -1,0 +1,45 @@
+
+<section>
+  <div class="dashfig">
+    <figure>
+      <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+    </figure>
+  </div>
+  <div class="dashfig">
+    <figure>
+      <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+    </figure>
+  </div>
+  <div class="dashfig">
+    <figure>
+      <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+    </figure>
+  </div>
+  <div class="dashfig">
+    <figure>
+      <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+      <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+    </figure>
+  </div>
+</section>
+<div class="table">
+
+<table>
+  <tr>
+    <th>Member Name</th>
+    <th>Book name</th>
+    <th>left days</th>
+  </tr>
+  {{#each result}}
+  <tr>
+    <th>{{this.full_name}}</th>
+    <th>{{this.book_name}}</th>
+    <th>{{ leftdays this.end_date }}</th>
+  </tr>
+  {{/each}}
+
+</table>
+</div>

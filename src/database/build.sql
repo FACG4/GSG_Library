@@ -1,5 +1,5 @@
 BEGIN;
-DROP TABLE IF EXISTS  members,admin,category,waiting_list,lending,books CASCADE;
+DROP TABLE IF EXISTS  members, admin, category, waiting_list, lending, books CASCADE;
 CREATE TABLE members (
   	id serial NOT NULL ,
 	full_name varchar(150) NOT NULL,
@@ -67,7 +67,11 @@ CREATE TABLE books (
 	publish_year varchar(100) NOT NULL,
 	category_id integer NOT NULL,
 	book_name varchar(100) NOT NULL UNIQUE,
+<<<<<<< HEAD
 	image varchar(400)  UNIQUE,
+=======
+	image varchar(400) ,
+>>>>>>> abea998cfa427c2661ba17f8b1dfbe8764e282bd
 	description varchar(500) NOT NULL,
   num_copy integer NOT NULL,
 	CONSTRAINT books_pk PRIMARY KEY ("id")
@@ -75,6 +79,7 @@ CREATE TABLE books (
   OIDS=FALSE
 );
 
+<<<<<<< HEAD
 
 
 
@@ -83,6 +88,8 @@ CREATE TABLE books (
 
 
 
+=======
+>>>>>>> abea998cfa427c2661ba17f8b1dfbe8764e282bd
 ALTER TABLE "waiting_list" ADD CONSTRAINT "waiting_list_fk0" FOREIGN KEY ("member_id") REFERENCES "members"("id");
 ALTER TABLE "waiting_list" ADD CONSTRAINT "waiting_list_fk1" FOREIGN KEY ("book_id") REFERENCES "members"("id");
 

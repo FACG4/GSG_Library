@@ -3,8 +3,16 @@ const router = express.Router();
 
 const dashboard = require('./dashboard');
 const login = require('./login.js');
+const reserv = require('./reserv.js');
 
 
-router.get('/admin', login.get);
-router.get('/dashboard', dashboard.get );
+router.get('/login', login.get);
+
+router.post('/login', login.post);
+
+
+router.get('/reserv', reserv.get);
+
+router.post('/reserv', reserv.post);
+
 module.exports = router;

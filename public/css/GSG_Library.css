@@ -1,6 +1,7 @@
 div.paleBlueRows {
   font-family: "Times New Roman", Times, serif;
   border: 1px solid #FFFFFF;
+<<<<<<< HEAD
   width: 50%;
   height: 300px;
   text-align: center;
@@ -9,10 +10,20 @@ div.paleBlueRows {
   margin-left: 200px;
 }
 
+=======
+  width:50%;
+  height: 300px;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 100px ;
+  margin-left:200px;
+}
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 .divTable.paleBlueRows .divTableCell, .divTable.paleBlueRows .divTableHead {
   border: 1px solid #FFFFFF;
   padding: 3px 2px;
 }
+<<<<<<< HEAD
 
 .divTable.paleBlueRows .divTableBody .divTableCell {
   font-size: 13px;
@@ -22,11 +33,22 @@ div.paleBlueRows {
   background: #D0E4F5;
 }
 
+=======
+.divTable.paleBlueRows .divTableBody .divTableCell {
+  font-size: 13px;
+}
+.divTable.paleBlueRows .divTableRow:nth-child(even) {
+  background: #D0E4F5;
+}
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 .divTable.paleBlueRows .divTableHeading {
   background: #0B6FA4;
   border-bottom: 5px solid #FFFFFF;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 .divTable.paleBlueRows .divTableHeading .divTableHead {
   font-size: 17px;
   font-weight: bold;
@@ -34,7 +56,10 @@ div.paleBlueRows {
   text-align: center;
   border-left: 2px solid #FFFFFF;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 .divTable.paleBlueRows .divTableHeading .divTableHead:first-child {
   border-left: none;
 }
@@ -46,6 +71,7 @@ div.paleBlueRows {
   background: #D0E4F5;
   border-top: 3px solid #444444;
 }
+<<<<<<< HEAD
 
 .paleBlueRows .tableFootStyle {
   font-size: 14px;
@@ -131,3 +157,16 @@ div.paleBlueRows {
     text-decoration: none;
     cursor: pointer;
 }
+=======
+.paleBlueRows .tableFootStyle {
+  font-size: 14px;
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a

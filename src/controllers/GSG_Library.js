@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const {
 	getBooksData,
 	updateBooks,
@@ -43,3 +44,14 @@ exports.post = (req, res) => {
 	});
 
 };
+=======
+const getBooksData = require('./../database/queries/GSG_Library');
+exports.get = (req, res)=>{
+	getBooksData((err, booksData)=>{
+		if(err) {
+			res.send('error in getting data');
+		}
+		res.render('GSG_Library',{style:'GSG_Library',booksData });
+	});
+};
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a

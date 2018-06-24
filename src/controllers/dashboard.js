@@ -1,10 +1,12 @@
 const {
+
 	getbooksnumbers,
 	getlentbooks,
 	getmembers,
 	getlendingmembers,
 	tabelDashboard
 } = require('./../database/quieres/dashboard');
+
 
 exports.get = (req, res) => {
 	getbooksnumbers((err, booksnumbers) => {

@@ -7,6 +7,10 @@
   margin-top: 80px;
   margin-right: 80px;
   background: black;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
   justify-content: center;
 }
 
@@ -20,9 +24,17 @@
 }
 
 .icondiv {
+<<<<<<< HEAD
   width: 100%;
   height: 80%;
 }
+=======
+width: 100%;
+height: 80%;
+}
+
+
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 
 .figcaption {
   width: 100%;
@@ -52,6 +64,7 @@
   background: #FFA000
 }
 
+<<<<<<< HEAD
 /* @media only screen and (max-width: 1300px) {
   .container {
     width: 800px;
@@ -104,6 +117,59 @@
         flex-direction: row-reverse;
         display: flex;
       }
+=======
+@media only screen and (max-width: 1300px) {
+  .container {
+        width:800px;
+        height: 200px;
+        background: blue
+    }
+  .dashfig{
+    width: 16%;
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+        width:700px;
+        height: 200px;
+        background: black
+    }
+  .dashfig{
+    width: 15%;
+}
+
+@media only screen and (max-width: 1150px) {
+  .container {
+        width:600px;
+        height: 200px;
+        background: blue
+    }
+  .dashfig{
+    width: 12%;
+}
+
+.table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-top: 250px;
+  font-size: 18px
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #BDBDBD;
+}
+tr:first-child {
+  color:#0A1226;
+  font-size: 18
+}
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a
 
       .send-email{
         display: none;

@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+const {
+	getBooksData,
+	updateBooks,
+	selectCategories
+} = require('./../database/quieres/GSG_Library');
+exports.get = (req, res) => {
+	getBooksData((err, booksData) => {
+		if (err) {
+			return res.send('error in getting data');
+		}
+		selectCategories((err, categories) => {
+			if (err) {
+				return res.send('error category data');
+			}
+
+			booksData.forEach((book) => {
+				book.category = [
+					{ id: book.cat_id, name: book.cat_name }
+				];
+				categories.forEach((cat) => {
+					if (book.category[0].id !== cat.id) {
+						book.category.push(cat);
+					}
+				});
+			});
+
+			res.render('GSG_Library', {
+				style: 'GSG_Library',
+				booksData, categories
+			});
+		});
+	});
+};
+
+exports.post = (req, res) => {
+	const {id, bname,author,publish_year,category,description}= req.body;
+	updateBooks(id, bname,author,publish_year,category,description,(err,result) => {
+		if(err) return res.status(500).send('server error');
+		res.status(200).send({msg:'success recieve'});
+		
+
+
+	});
+
+};
+=======
 const getBooksData = require('./../database/queries/GSG_Library');
 exports.get = (req, res)=>{
 	getBooksData((err, booksData)=>{
@@ -7,3 +54,4 @@ exports.get = (req, res)=>{
 		res.render('GSG_Library',{style:'GSG_Library',booksData });
 	});
 };
+>>>>>>> 6cd93514f953f5becfc3db5e11d60e63db86717a

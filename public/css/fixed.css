@@ -2,11 +2,35 @@ body {
   margin: 0;
   border: 0 ;
   padding:0;
-  background:#E0E0E0
+
 /* linear-gradient(to bottom left, #33ccff 57%, #ff99cc 98%); */
 }
 
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-left: -178px;
+    margin-top: 15px;
+}
+.hide-dropdown-content {
+    display: none;
+}
+.dropdown:active .dropdown-content {
+display: block;
+}
+
   .header {
+    overflow: hidden;
+  
+    position: fixed;
+    top: 0;
+    width: 100%;
   height: 18px;
    display: flex;
    justify-content: space-between;
@@ -19,6 +43,8 @@ body {
      font-weight: 300;
      line-height: 1.5em;
    padding: 20px 10px;
+z-index: 888888888;
+
 }
 .header a {
   float: left;
@@ -37,6 +63,7 @@ body {
   width: 90px;
   height: 50px;
   float: left;
+  z-index: 9999;
 }
 
 .header a.active {
@@ -59,15 +86,8 @@ body {
 .admin {
   width: 100%;
   height: 80px;
+  padding-top: 40px;
 }
-/* .adminImg {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  float: left;
-   margin:10px;
-  margin :10px 20px
-} */
 
 .adminName {
   float: left;
@@ -85,14 +105,18 @@ body {
 
 
 .sidebar {
-  height: 620px;
+  
   background-color:#0A1226;
-  float: left;
-    width: 260px;
+    /* overflow-scrolling: touch; */
+    height: 100%;
+    width: 250px;
+    position: fixed;
     z-index: 4;
-    position: relative;
-    overflow: auto;
-    overflow-scrolling: touch;
+    top: 0;
+    left: 0;
+
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 

@@ -3,13 +3,16 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const expressValidator = require('express-validator');
 const controllers = require('./controllers');
 const helpers = require('./views/helpers/index');
 const Swal = require('sweetalert');
+
+
+//init app
+
 const app = express();
 
-
+// view setup
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -28,8 +31,8 @@ app.engine(
 
 	})
 );
-
-
-
+app.use((req,res)=>{
+	res.render('404' , { message : 'page Not Found',layout:'error',style:'404'});
+});
 
 module.exports = app;
